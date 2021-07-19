@@ -6,6 +6,7 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/anidn0/ICDT/Week3.git
 git remote set-url origin https://github.com/anidn0/ICDT/Week3.git
+git remote add origin https://github.com/anidn0/workspace/tree/main/week4.git
 git push -u origin main
 
 hint: You've added another git repository inside your current repository.
