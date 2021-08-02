@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--<form id="one">-->
+    <label for="How Many?">How Many?</label>
+    <input type="text" id="How Many?" name="How Many?" /><br /><br />
+    <label for="Which coin?">Which coin?</label>
+    <select name="Which coin?" id="Which coin?">
+        <option value="penny">penny</option>
+        <option value="nickel">nickel</option>
+        <option value="dime">dime</option>
+        <option value="quarter">quarter</option>
+     </select><br><br><br><br>
+    <button id="mm-button">Make Money</button><br /><br /><br /><br />
+    <div>
+      <p id="show-results"></p>
+    </div>
+    <!--</form>-->
+    <script>
+      // (function showAlert() {
+      //  alert(`You did it`);
+      const b1 = document.getElementById("mm-button");
+      //b1.addEventListener('click', showAlert);  // To test the button works
+      b1.addEventListener("click", () => {
+
+        const hm = document.getElementById("How Many?").value;
+        const wc = document.getElementById("Which coin?").value;
+        const answer = document.getElementById("show-results");
+        const newPar = document.createElement("p");
+        const newDiv = document.createElement("div");
+        console.log(wc);
+        console.log(hm);
+        console.log(answer);
+        const printTest = wc;
+       
+        //srOP.innerText = "test";
+        answer.append(printTest);
+      });
+
+      if (wc === 'penny') {
+          answer.innerText = (hm * 1);
+      }
+      if (wc === 'nickel') {
+          answer.innerText = (hm * 5);
+      }
+      if (wc === 'dime') {
+          answer.innerText = hm * 10;
+      }
+      if (wc === 'quarter') {
+          answer.innerText = hm * 25;
+      }
+      // p.innerText = (hm * wc);
+      //a.innerText = (hm * wc);
+      // Create Dimes
+      //});
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

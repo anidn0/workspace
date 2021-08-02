@@ -1,0 +1,36 @@
+// body element  ways to access various nodes within the DOM.
+const bodyNode = document.body;
+// html element
+const htmlNode = document.body.parentNode;
+// Array of all body's children
+const childNodes = document.body.childNodes;
+
+
+//To access an element on the page using its ID...
+let nav = document.getElementById("top-nav");
+
+
+//two other common methods that can be used to
+do the selecting which are:
+document.querySelector("#intro"); // one with ID intro
+document.querySelectorAll("p"); // all <p> tags
+document.querySelectorAll(".row"); // all with class row
+
+
+//Manipulating Elements
+const el = document.getElementById("myLink");
+el.innerText = "Hello World";
+el.classList.add("selected");
+el.setAttribute("href", "/hello.html");
+
+Manipulating: CSS Classes
+el.classList.add("some-class");
+el.classList.remove("some-class");
+el.classList.toggle("some-class");
+if (el.classList.contains("some-class")) {
+... }
+
+Manipulating: Attributes
+el.setAttribute("href", "http://example.com");
+el.setAttribute("title", "I'm a tooltip!");
+let imgSource = el.getAttribute("src");

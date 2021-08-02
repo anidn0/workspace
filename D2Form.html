@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<link href="DOM_ex4.css" rel="stylesheet">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body id="all">
+    <div id="sunday" class="div1">
+    <form id="one">
+    <label for="How Many?">How Many?</label>
+    <input type="text" id="How Many?" name="How Many?" /><br /><br />
+    <label for="Which coin?">Which coin?</label>
+    <select name="Which coin?" id="Which coin?">
+        <option value="penny">Penny</option>
+        <option value="nickel">Nickel</option>
+        <option value="dime">Dime</option>
+        <option value="quarter">Quarter</option>
+     </select><br><br>
+    <button id="mm-button" class="mm-button">Make Money!</button><br /><br />
+    <div id="mainDiv" class="div2" >
+    <p id="show-results"></p>
+    </div>
+
+    </form>
+    </div>
+    <script>
+      document.getElementById("one").addEventListener("click", (event) => {
+      event.preventDefault();
+      });
+      const b1 = document.getElementById("mm-button");
+      b1.addEventListener("click", () => {
+
+        let hm = document.getElementById("How Many?").value;
+        let wc = document.getElementById("Which coin?").value;
+        console.log(hm);
+          const answer = document.getElementById("show-results");
+          
+         
+         
+          for(hm; hm > 0; hm--) {
+            const newDiv = document.createElement("div");
+            newDiv.innerHTML = wc; 
+            newDiv.classList.add("circle1");
+            document.body.appendChild(newDiv);
+             }
+        
+         });
+           
+         function deleteCoin(e) {
+            if(e.target.classList.contains("circle1")) {
+              console.log(e.target);
+              e.target.remove();
+            }
+            console.log("click to Delete");
+         }
+
+         document.getElementById("all").addEventListener("click", deleteCoin); 
+
+    </script>
+  </body>
+</html>
+
+<!-- document.getElementById("moneyForm").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

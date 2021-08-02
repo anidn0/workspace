@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<link href="DOM_ex4.css" rel="stylesheet">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--<form id="one">-->
+    <label for="How Many?">How Many?</label>
+    <input type="text" id="How Many?" name="How Many?" /><br /><br />
+    <label for="Which coin?">Which coin?</label>
+    <select name="Which coin?" id="Which coin?">
+        <option value="penny">penny</option>
+        <option value="nickel">nickel</option>
+        <option value="dime">dime</option>
+        <option value="quarter">quarter</option>
+     </select><br><br><br><br>
+    <button id="mm-button">Make Money</button><br /><br /><br /><br />
+    <div>
+      <p id="show-results"></p>
+    </div>
+
+<div class="circle1">Dime </div> 
+<div class="circle2">Dime </div> 
+<div class="circle3">Penny </div> 
+
+    <!--</form>-->
+    <script>
+      // (function showAlert() {
+      //  alert(`You did it`);
+      const b1 = document.getElementById("mm-button");
+      //b1.addEventListener('click', showAlert);  // To test the button works
+      b1.addEventListener("click", () => {
+
+        const hm = document.getElementById("How Many?").value;
+        const wc = document.getElementById("Which coin?").value;
+        const answer = document.getElementById("show-results");
+        const newDiv = document.createElement("div");
+        newDiv.innerHTML = wc; 
+        newDiv.className = "circle1";
+
+        
+        //newDiv.id = "circle"
+        console.log(wc);
+        console.log(hm);
+        console.log(answer);
+        document.body.appendChild(newDiv)
+       
+        
+
+
+      });
+
+      // mnDiv();
+      // function mnDiv(hm)
+      // for(let i = hm; i > 0; hm = hm -1) {
+      // document.body.appendChild(newDiv)
+      // }
+       
+
+       
+        
+        
+        //answer.append(`dina ${printTest}`);
+  
+
+      // if (wc === 'penny') {
+      //     answer.innerText = (hm * 1);
+      // }
+      // if (wc === 'nickel') {
+      //     answer.innerText = (hm * 5);
+      // }
+      // if (wc === 'dime') {
+      //     answer.innerText = hm * 10;
+      // }
+      // if (wc === 'quarter') {
+      //     answer.innerText = hm * 25;
+      
+      
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

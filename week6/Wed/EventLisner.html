@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div>
+		<h3>Question 1</h3>
+		Add a purple p element to the div below
+		<div id="question1">
+		</div>
+	</div>
+	<div>
+		<h3>Question 2</h3>
+		Add a blue p element to the div below
+		<div id="question2">
+		</div>
+	</div>
+	<div>
+		<h3>Question 3</h3>
+		Add an orange div with a p tag inside it
+		<div id="questio3">
+		</div>
+	</div>
+	<div>
+		<h3>Question 4</h3>
+		Add an orange div with a blue div with a p tag
+		<!-- <div class="orange">
+					<div class="blue">
+						<p>Hello</p>
+					</div>
+				</div> -->
+		<div id="question4">
+		</div>
+	</div>
+
+
+
+<script>
+    //1
+    const np = document.createElement('p');
+    np.style.backgroundColor = 'purple';
+    np.innerText = 'Purple P';
+    const q1 = document.getElementById("question1")
+    q1.append(np);
+    //2 
+    // const np2 = document.createElement('p');
+    // np.style.backgroundColor = 'blue';
+    // np.innetText = 'Monday Monday';
+    // //3 
+    // const ndiv = document.createElement('div');
+    // np.style.backgroundColor = 'orange';
+    // np.innetText = 'Monday Monday';
+    // // 4
+    // const ndiv = document.createElement('div');
+    // const bdiv = document.createElement('div');
+    // const np3 = docucment.createElement('p');
+    // np.style.backgroundColor = 'orange';
+    // np.innetText = 'Monday Monday';
+
+    // np.append(div);
+    // document.body.append(np);
+
+</script>
+
+
+    
+</body>
+
+
+</html>

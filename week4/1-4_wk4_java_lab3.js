@@ -22,9 +22,14 @@ function deleteSubmissionByIndex(array, nindex) {
         }
 deleteSubmissionByIndex(submission, 1); //Get Jill to return from functijon
 console.log(`***(3) Subtract By Index Joe`)
+
+//  ******  4 ******************
 function deleteSubmissionByName(array, name) {
+    // we need to loop thru all element in the array to find the name I want to remove. 
     const nindex = array.findIndex(array => array.name  === name);
     submission.splice(nindex);
+
+    // or user function your create before   deleteSubmissionByIndex(array, nindex)
     //console.log(submission);  // test the line above
     }
 deleteSubmissionByName(submission, "Jack"); //Get Jill to return from functijon

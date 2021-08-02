@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<link href="Dom_ex2.css" rel="stylesheet">
+<html lang="en">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+  <div class="topnav">
+  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+  <a href="javascript:void(0);" class="icon" onclick="mylinks">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+    <div >
+        <h2>He who knows</h2>
+        <p id="ione">
+            He who knows not, and knows not that he knows not, is a fool,
+            shun him; He who knows not, and knows that he knows not, is
+            a child, teach him. He who knows, and knows not that he knows, 
+            is asleep, wake him. He who knows, and knows that he knows, is wise, follow him.
+        <p>
+
+    <p>
+    	<input type="button" value="Show DIV" id="bt" onclick="toggle(this)">
+    </p>
+
+    <!--The DIV element to toggle visibility. Its "display" property is set as "none". -->
+    <div style="border:solid 1px #ddd; padding:10px; display:none;" id="cont">
+        <div>
+            8 5 23 8 15 11 14 15 23 19 14 15 20 1 14 4 11 14 15 23 19 14 15 20
+            20 8 1 20 8 5 11 14 15 23 19 14 15 20 9 19 1 6 15 15 12 19 8 21 14
+            8 9 13 8 5 23 8 15 11 14 15 23 19 14 15 20 1 14 4 11 14 15 23 19
+            20 8 1 20 8 5 11 14 15 23 19 14 15 20 9 19 1 3 8 9 12 4 20 5 1 
+            3 8 8 9 13 8 5 23 8 15 11 14 15 23 19 1 14 4 11 14 15 23 19 14 
+            15 20 20 8 1 20 8 5 11 14 15 23 19 9 19 1 19 12 5 5 16 23 1 11 5 8 
+            9 13 8 5 23 8 15 11 14 15 23 19 1 14 4 11 14 15 23 19 20 8 1 20 8 5 
+            11 14 15 23 19 9 19 23 9 19 5 6 15 12 12 15 23 8 9 13 
+        </div>
+    </div>
+</body>
+<script>
+    function toggle(ele) {
+        var cont = document.getElementById('cont');
+        if (cont.style.display == 'block') {
+            cont.style.display = 'none';
+
+            document.getElementById(ele.id).value = 'Show DIV';
+        }
+        else {
+            cont.style.display = 'block';
+            document.getElementById(ele.id).value = 'Hide DIV';
+        }
+    }
+</script>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="Dom_Ex2.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="dropdown">
+        <i class="fa fa-bars" onclick="myFunction()" class="dropbtn"></i>
+        <button onclick="myFunction()" class="dropbtn">OnDina Dropdown</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#" onclick="toggleL()">Letters</a>
+          <a href="#" onclick="toggleA()">Numbers</a>
+          <a href="#" onclick="toggle()">Switch</a>
+        </div><br><br><br><br>
+    </div>
+
+  <div class="topnav">
+  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+  <a href="javascript:void(0);" class="icon" onclick="mylinks">
+  <i class="fa fa-bars"></i> <br>
+  </a>
+  </div>
+
+
+  <div>
+        <div style="border:solid 1px #ddd; padding:10px; display: block; " id="divOne">
+            
+            <div>
+                He who knows not, and knows not that he knows not, is a fool,
+                shun him; He who knows not, and knows that he knows not, is
+                a child, teach him. He who knows, and knows not that he knows, 
+                is asleep, wake him. He who knows, and knows that he knows, is wise, follow him.
+            </div>
+        </div>
+
+
+        <p>
+            <input type="button" value="First Load Show Numbers / Hide Letters" id="bt" onclick="toggle(this)">
+        </p> 
+
+        <p>
+            <!-- <input type="button" value="Show Letters" id="bt2" onclick="toggle(this)"><br><br><br> -->
+            <a href="#" onclick="toggle()">Switch</a><br><br><br>
+            <a href="#" onclick="toggleL()">letters</a><br><br><br>
+            <a href="#" onclick="toggleN()">numbers</a><br><br><br>
+        </p> 
+   
+        <!--The DIV element to toggle visibility. Its "display" property is set as "none". -->
+        <div style="border:solid 1px #ddd; padding:10px; display:none;" id="cont">
+            <div>
+                8 5 23 8 15 11 14 15 23 19 14 15 20 1 14 4 11 14 15 23 19 14 15 20
+                20 8 1 20 8 5 11 14 15 23 19 14 15 20 9 19 1 6 15 15 12 19 8 21 14
+                8 9 13 8 5 23 8 15 11 14 15 23 19 14 15 20 1 14 4 11 14 15 23 19
+                20 8 1 20 8 5 11 14 15 23 19 14 15 20 9 19 1 3 8 9 12 4 20 5 1 
+                3 8 8 9 13 8 5 23 8 15 11 14 15 23 19 1 14 4 11 14 15 23 19 14 
+                15 20 20 8 1 20 8 5 11 14 15 23 19 9 19 1 19 12 5 5 16 23 1 11 5 8 
+                9 13 8 5 23 8 15 11 14 15 23 19 1 14 4 11 14 15 23 19 20 8 1 20 8 5 
+                11 14 15 23 19 9 19 23 9 19 5 6 15 12 12 15 23 8 9 13 
+            </div>
+        </div>
+        
+        
+    </div>
+</body>
+<script>
+        function toggle(ele) {
+        var cont = document.getElementById('cont');
+        var alph = document.getElementById('divOne');
+        if (cont.style.display == 'block') {
+            cont.style.display = 'none';
+            alph.style.display = 'block'
+            
+            document.getElementById(ele.id).value = 'Show Numbers / Hide Numbers'; 
+        }
+        else {
+            cont.style.display = 'block';
+            alph.style.display = 'none'
+           
+            document.getElementById(ele.id).value = 'Show Letters / Hide Letters';  
+        }
+    }
+    function toggleL(ele) {
+        var alph = document.getElementById('divOne');
+        var cont = document.getElementById('cont');
+        cont.style.display = 'none';
+        alph.style.display = 'block';
+               
+    }
+    function toggleN(ele) {
+        var alph = document.getElementById('divOne');
+        var cont = document.getElementById('cont');
+        cont.style.display = 'block';
+        alph.style.display = 'none';
+    }
+
+
+  function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+  }
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+
