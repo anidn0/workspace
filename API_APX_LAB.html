@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body> <p>Aww Subreddit Page</p>
+    <div id="container"> 
+        <img id="image" style="width: 300px;"/>
+        <button id="button" onclick="fetchData()">Get Data</button><br>
+        <div id=d2 ><a id="myAnchor" >Link </a></div>
+    </div>
+<script>
+
+function fetchData(){
+   
+url = "https://www.reddit.com/r/aww/.json"
+
+fetch(url)
+.then(function(response){
+    console.log(response);
+return response.json();   
+})
+
+
+.then(function(data){
+    for (i = 0;i < 10; i++){
+    makeLink(data.data.children[i].data.url); 
+    display_image(data.data.children[i].data.thumbnail);
+    showTitle(data.data.children[i].data.title); 
+   
+}})
+.catch(function(error){
+    console.log("Error: " + error);
+});
+}
+
+function showTitle(title){
+    const newDiv = document.createElement('div')
+    newDiv.innerHTML = (`The Title is: `  + title)
+    document.body.appendChild(newDiv);
+}
+
+function display_image(image_url){
+    const newPic= document.createElement('div2')
+    document.getElementById("image").src = image_url;
+    document.body.appendChild(newPic);
+}
+function makeLink(nlink){
+    const newPic= document.createElement('div2')
+    const anchor = document.getElementById("myAnchor");
+    const att = document.createAttribute("href");
+    att.value = nlink;
+    anchor.setAttributeNode(att);
+    }
+
+</script>
+</body>
+</html>
